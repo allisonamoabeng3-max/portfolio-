@@ -1,15 +1,9 @@
-// Welcome message
-console.log("Welcome to Allison Mingle's Portfolio!");
+document.addEventListener("DOMContentLoaded", () => {
+    const heading = document.querySelector("h1");
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+    heading.addEventListener("click", () => {
+        alert("Welcome to Allison's Portfolio!");
     });
+
+    console.log("Portfolio loaded successfully!");
 });
